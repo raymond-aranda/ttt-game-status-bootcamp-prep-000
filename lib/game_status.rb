@@ -39,9 +39,9 @@ end
 
 def winner(board)
   WIN_COMBINATIONS.detect do |win_combination|
-    if win_combination[0] == "X"
+    if board[win_combination[0]] == "X"
       return "X"
-    elsif win_combination[0] == "O"
+    elsif board[win_combination[0]] == "O"
       return "O"
     else
       return nil
