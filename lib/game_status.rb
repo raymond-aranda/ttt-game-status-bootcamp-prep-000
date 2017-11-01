@@ -38,13 +38,6 @@ def over?(board)
 end
 
 def winner(board)
-  WIN_COMBINATIONS.detect do |win_combination|
-    if board[win_combination[0]] == "X"
-      return "X"
-    elsif board[win_combination[0]] == "O"
-      return "O"
-    elsif board[win_combination[0]] == " "
-      return nil
-    end
-  end
+  if winning_combo = won?(board)
+    board[winning_combo.first]
 end
