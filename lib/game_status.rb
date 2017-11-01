@@ -30,7 +30,7 @@ def full?(board)
 end
 
 def draw?(board)
-  if !won?(board) && !position_taken?(board, index)
+  if !won?(board) && position_taken?(board, index)
     return true
   end
 end
